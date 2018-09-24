@@ -44,8 +44,8 @@ describe Prawn::Text::Formatted::LineWrap do
   end
 
   it 'tokenizes a string conforming to Polish standards' do
-    tokens = line_wrap.tokenize('raz dwa i trzy')
-    expect(tokens).to eq(['raz', ' ', 'dwa', ' ', 'i trzy'])
+    tokens = line_wrap.tokenize('dziw­nym a asd-qwe kątem i w z o pro­wa­dziła')
+    expect(tokens).to eq(["dziw­", "nym", " ", "a asd-", "qwe", " ", "kątem", " ", "i w z o pro­", "wa­", "dziła"])
   end
 
   describe 'Core::Text::Formatted::LineWrap#wrap_line' do
