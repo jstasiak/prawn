@@ -211,7 +211,7 @@ module Prawn
           while fragment = retrieve_fragment
             # rubocop: enable Lint/AssignmentInCondition
             fragment.include_trailing_white_space!
-            new_unconsumed << fragment.format_state.merge(text: fragment.text)
+            new_unconsumed << fragment.format_state.merge(text: fragment.original_text)
           end
           @unconsumed = new_unconsumed.concat(@unconsumed)
         end

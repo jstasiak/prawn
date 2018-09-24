@@ -14,7 +14,7 @@ module Prawn
       #
       # @private
       class Fragment
-        attr_reader :format_state, :text
+        attr_reader :format_state, :original_text, :text
         attr_writer :width
         attr_accessor :line_height, :descender, :ascender
         attr_accessor :word_spacing, :left, :baseline
