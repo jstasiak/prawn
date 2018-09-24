@@ -131,6 +131,7 @@ module Prawn
           ews = whitespace(encoding)
 
           patterns = [
+            "(?:a|i|o|u|w|z|A|I|O|U|W|Z)[#{ews}]+[^#{ebc}]+",
             "[^#{ebc}]+#{eshy}",
             "[^#{ebc}]+#{ehy}+",
             "[^#{ebc}]+",

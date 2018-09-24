@@ -43,6 +43,11 @@ describe Prawn::Text::Formatted::LineWrap do
     expect(tokens.length).to eq(5)
   end
 
+  it 'tokenizes a string conforming to Polish standards' do
+    tokens = line_wrap.tokenize('raz dwa i trzy')
+    expect(tokens).to eq(['raz', ' ', 'dwa', ' ', 'i trzy'])
+  end
+
   describe 'Core::Text::Formatted::LineWrap#wrap_line' do
     let(:arranger) { Prawn::Text::Formatted::Arranger.new(pdf) }
     let(:one_word_width) { 50 }
